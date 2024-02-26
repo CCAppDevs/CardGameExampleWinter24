@@ -11,17 +11,19 @@ private:
 	vector<Card*> Cards;
 
 public:
-	Deck();
+	Deck(bool isEmpty = false);
 
 	// shuffle, draw a card, add a card, reset
 	void Shuffle();
 
-	Card Draw();
+	Card* Draw();
 
 	void AddCard(Card* incomingCard);
 
 	void AddCard(string rank, string suit);
 
 	void Reset(bool shouldShuffle = false);
+
+	void PrintContents();
 };
 
