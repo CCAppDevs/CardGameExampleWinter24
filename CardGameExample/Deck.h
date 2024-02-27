@@ -2,12 +2,14 @@
 #include <vector>
 #include "Card.h"
 #include <iostream>
+#include <algorithm>
+#include <random>
 
 using namespace std;
 
 class Deck
 {
-private:
+protected:
 	vector<Card*> Cards;
 
 public:

@@ -8,6 +8,7 @@ public:
 
 	std::string GetRank();
 	std::string GetSuit();
+	int GetValue();
 
 	std::string ToString();
 

@@ -51,11 +51,15 @@ Deck::Deck(bool isEmpty)
 				Cards.push_back(new Card(rankName, suitName));
 			}
 		}
+		Shuffle();
 	}
 }
 
 void Deck::Shuffle()
 {
+	// randomize the cards some how
+	auto rng = default_random_engine{};
+	shuffle(Cards.begin(), Cards.end(), rng);
 }
 
 Card* Deck::Draw()
