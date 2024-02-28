@@ -57,8 +57,11 @@ Deck::Deck(bool isEmpty)
 
 void Deck::Shuffle()
 {
-	// randomize the cards some how
+	// set up a random number generator
 	auto rng = default_random_engine{};
+	// seeding the random sequence with time to always get a different sequence
+	rng.seed(time(NULL));
+	// shuffle the deck using the rng
 	shuffle(Cards.begin(), Cards.end(), rng);
 }
 
