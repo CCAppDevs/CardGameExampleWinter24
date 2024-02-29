@@ -13,6 +13,10 @@ public:
 	void DisplayMenu();
 	void DisplayHand();
 	void DisplayDealerHand();
+	void TakeTurn();
+	bool CheckIsWinning();
+	void TakeDealerTurn();
+	bool CanDealerPlay();
 
 private:
 	int Chips;
